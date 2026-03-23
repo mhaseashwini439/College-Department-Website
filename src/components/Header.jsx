@@ -30,14 +30,16 @@ export default function Header() {
             {/* Social Icons - hidden on mobile */}
             <div className="hidden lg:flex items-center gap-2">
               {[
-                { icon: Facebook, label: 'Facebook' },
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Instagram, label: 'Instagram' },
-                { icon: Youtube, label: 'YouTube' },
-              ].map(({ icon: Icon, label }) => (
+                { icon: Facebook, label: 'Facebook', url: 'https://facebook.com/' },
+                { icon: Twitter, label: 'Twitter', url: 'https://twitter.com/' },
+                { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/' },
+                { icon: Youtube, label: 'YouTube', url: 'https://youtube.com/' },
+              ].map(({ icon: Icon, label, url }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-8 h-8 rounded-full bg-section-bg flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-all duration-200"
                 >

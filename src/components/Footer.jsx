@@ -71,14 +71,16 @@ export default function Footer() {
             <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Follow Us</h3>
             <div className="flex items-center gap-2 mb-6">
               {[
-                { icon: Facebook, label: 'Facebook' },
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Instagram, label: 'Instagram' },
-                { icon: Youtube, label: 'YouTube' },
-              ].map(({ icon: Icon, label }) => (
+                { icon: Facebook, label: 'Facebook', url: 'https://facebook.com/' },
+                { icon: Twitter, label: 'Twitter', url: 'https://twitter.com/' },
+                { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/' },
+                { icon: Youtube, label: 'YouTube', url: 'https://youtube.com/' },
+              ].map(({ icon: Icon, label, url }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-200"
                 >

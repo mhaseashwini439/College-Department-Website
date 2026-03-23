@@ -78,6 +78,8 @@ export const initialData = {
     social: [],
   },
 
+  skillPrograms: [],
+
   books: {
     "FY": [
       { id: 1, subject: "Problem Solving using C", semester: "Semester I", referenceBookUrl: "https://www.unf.edu/~wkloster/2220/ppts/cprogramming_tutorial.pdf", labBookUrl: "https://www.vssut.ac.in/lecture_notes/lecture1424354156.pdf", normalBookUrl: "https://powerunit-ju.com/wp-content/uploads/2021/04/Yashavant-Kanetkar-Let-Us-C.pdf", videoUrl: "https://www.youtube.com/watch?v=K37Z6O1o5OI", thumbnailUrl: "https://img.youtube.com/vi/K37Z6O1o5OI/hqdefault.jpg", referenceBookName: "The C Programming Language (Ritchie)", labBookName: "C Lab Manual Ver 2.0", normalBookName: "Let Us C (Kanetkar)", icon: "Code", tags: ["Important", "Most Viewed"], duration: "12:45" },
