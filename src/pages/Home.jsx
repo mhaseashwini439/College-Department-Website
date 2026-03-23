@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Play, ArrowRight, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
-import PlaceholderImage from '../components/PlaceholderImage';
+import ChartComponent from '../components/ChartComponent';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -12,6 +12,20 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } }
 };
 
+const placementData = [
+  { year: '2021', students: 75 },
+  { year: '2022', students: 120 },
+  { year: '2023', students: 158 },
+  { year: '2024', students: 185 },
+];
+
+const alumniData = [
+  { year: '2021', network: 450 },
+  { year: '2022', network: 780 },
+  { year: '2023', network: 1100 },
+  { year: '2024', network: 1450 },
+];
+
 export default function Home() {
   return (
     <div>
@@ -21,61 +35,64 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-72 h-72 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
+        <div className="relative max-w-[95%] mx-auto px-4 py-16 md:py-24">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="grid lg:grid-cols-2 gap-10 items-center"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center"
           >
-            <motion.div variants={fadeUp}>
+            {/* Left: Placement Chart */}
+            <motion.div variants={fadeUp} className="h-full">
+              <ChartComponent title="Year-wise Placements" data={placementData} dataKey="students" color="#3B82F6" />
+            </motion.div>
+
+            {/* Middle-Left: Welcome Text */}
+            <motion.div variants={fadeUp} className="text-center lg:text-left">
               <span className="inline-block px-3 py-1 bg-white/10 text-blue-200 text-xs font-medium rounded-full mb-4">
                 Welcome to
               </span>
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              <h1 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 Department of<br />
                 <span className="text-blue-300">Computer Science</span>
               </h1>
-              <p className="text-gray-300 text-base md:text-lg mb-8 max-w-lg">
-                Shaping future tech leaders through quality education, practical training, and industry-oriented programs at AJMVPS College, Ahilyanagar.
+              <p className="text-gray-300 text-sm mb-6">
+                Shaping future tech leaders through quality education at AJMVPS College, Ahilyanagar.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Link
                   to="/admission"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-200 shadow-lg shadow-primary/25"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-hover transition-all duration-200"
                 >
-                  Apply for UG <ArrowRight size={16} />
+                  Apply UG <ArrowRight size={14} />
                 </Link>
                 <Link
                   to="/admission"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-navy font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white text-navy text-sm font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200"
                 >
-                  Apply for PG <ArrowRight size={16} />
+                  Apply PG <ArrowRight size={14} />
                 </Link>
               </div>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-3">
-              <div className="col-span-2 bg-white/5 backdrop-blur rounded-xl border border-white/10 overflow-hidden">
-                <div className="aspect-video flex items-center justify-center bg-black/20">
+            {/* Middle-Right: Video */}
+            <motion.div variants={fadeUp} className="h-full">
+              <div className="bg-white/5 backdrop-blur rounded-xl border border-white/10 overflow-hidden h-full flex flex-col">
+                <div className="aspect-video flex items-center justify-center bg-black/20 flex-grow">
                   <div className="text-center text-white/60">
                     <Play size={40} className="mx-auto mb-2" />
                     <p className="text-sm">Department Video</p>
                   </div>
                 </div>
-              </div>
-              <div className="bg-white/5 backdrop-blur rounded-xl border border-white/10 overflow-hidden relative aspect-video">
-                <img src="/Information/Dept Event Photh/DSC_3790.JPG" alt="Department Office" className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                  <p className="text-white text-xs font-medium">Department Office</p>
+                <div className="p-3 bg-black/20 mt-auto">
+                    <p className="text-white text-xs font-medium text-center">Take a Virtual Tour</p>
                 </div>
               </div>
-              <div className="bg-white/5 backdrop-blur rounded-xl border border-white/10 overflow-hidden relative aspect-video">
-                <img src="/Information/Dept Event Photh/DSC_5037.JPG" alt="Computer Lab" className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                  <p className="text-white text-xs font-medium">Computer Lab</p>
-                </div>
-              </div>
+            </motion.div>
+
+            {/* Right: Alumni Chart */}
+            <motion.div variants={fadeUp} className="h-full">
+              <ChartComponent title="Alumni Network Growth" data={alumniData} dataKey="network" color="#10B981" />
             </motion.div>
           </motion.div>
         </div>

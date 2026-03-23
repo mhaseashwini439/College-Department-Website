@@ -42,7 +42,21 @@ export const initialData = {
     { id: 1, year: "FY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/Fy-B.-Sc.-Computer-Sciecne-2024-25.pdf", pyqUrl: "#" },
     { id: 2, year: "SY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/SY B. Sc. Major syllabus template for Printout.pdf", pyqUrl: "#" },
     { id: 3, year: "TY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/TYBSC  Computer Science Major SYLLABUS 2025-26 FINAL.pdf", pyqUrl: "#" },
-    { id: 4, year: "M.Sc. CS", level: "PG", semester: "All", syllabusUrl: "/Information/Syllabus/M.SC New PG Syllabus Template for Major in Science Faculty Final (1).pdf", pyqUrl: "#" },
+    { id: 4, year: "M.Sc. CS - I", level: "PG", semester: "Sem I & II", syllabusUrl: "/Information/Syllabus/MSc_CS_Part_1_Syllabus.pdf", pyqUrl: "#" },
+    { id: 5, year: "M.Sc. CS - II", level: "PG", semester: "Sem III & IV", syllabusUrl: "/Information/Syllabus/MSc_CS_Part_2_Syllabus.pdf", pyqUrl: "#" },
+  ],
+
+  results: [
+    { id: 1, title: "FY B.Sc. CS", semester: "Semester I", date: "Jan 2024", pdfUrl: "/Information/Results/fy_sem1.pdf" },
+    { id: 2, title: "FY B.Sc. CS", semester: "Semester II", date: "April 2024", pdfUrl: "/Information/Results/fy_sem2.pdf" },
+    { id: 3, title: "SY B.Sc. CS", semester: "Semester III", date: "Jan 2024", pdfUrl: "/Information/Results/sy_sem3.pdf" },
+    { id: 4, title: "SY B.Sc. CS", semester: "Semester IV", date: "April 2024", pdfUrl: "/Information/Results/sy_sem4.pdf" },
+    { id: 5, title: "TY B.Sc. CS", semester: "Semester V", date: "Jan 2024", pdfUrl: "/Information/Results/ty_sem5.pdf" },
+    { id: 6, title: "TY B.Sc. CS", semester: "Semester VI", date: "April 2024", pdfUrl: "/Information/Results/ty_sem6.pdf" },
+    { id: 7, title: "M.Sc. CS - I", semester: "Semester I", date: "Jan 2024", pdfUrl: "/Information/Results/msc1_sem1.pdf" },
+    { id: 8, title: "M.Sc. CS - I", semester: "Semester II", date: "April 2024", pdfUrl: "/Information/Results/msc1_sem2.pdf" },
+    { id: 9, title: "M.Sc. CS - II", semester: "Semester III", date: "Jan 2024", pdfUrl: "/Information/Results/msc2_sem3.pdf" },
+    { id: 10, title: "M.Sc. CS - II", semester: "Semester IV", date: "April 2024", pdfUrl: "/Information/Results/msc2_sem4.pdf" },
   ],
 
   toppers: [],
@@ -99,7 +113,7 @@ export const initialData = {
 };
 
 // Keys used in localStorage
-const STORAGE_KEY = 'cs_dept_data_v4';
+const STORAGE_KEY = 'cs_dept_data_v7';
 
 export function loadData() {
   const stored = localStorage.getItem(STORAGE_KEY);
