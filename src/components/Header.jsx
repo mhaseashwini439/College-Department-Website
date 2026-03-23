@@ -11,12 +11,15 @@ export default function Header() {
         <div className="flex items-center justify-between gap-4">
           {/* Logo + College Name */}
           <Link to="/" className="flex items-center gap-3 md:gap-4 transition-transform hover:scale-[1.01]">
-            <img src="/Information/Logo/College logo.png" alt="College Logo" className="w-12 h-12 md:w-16 md:h-16 shrink-0 object-contain" />
+            <img src="/Information/Logo/College logo.png" alt="College Logo" className="w-20 h-20 md:w-32 md:h-32 shrink-0 object-contain" />
             <div className="hidden sm:block">
-              <h1 className="text-sm md:text-base font-bold text-navy leading-tight">
+              <h1 className="text-base md:text-xl font-extrabold text-navy leading-tight">
                 AJMVPS New Arts, Commerce & Science College
               </h1>
-              <p className="text-xs text-gray-500">
+              <h2 className="text-sm md:text-2xl font-bold text-red-600 mt-1">
+                Department of Computer Science
+              </h2>
+              <p className="text-xs md:text-sm text-gray-500 mt-1">
                 Tel: 0241-2324024 | Lal Taki Road, Ahmednagar 414001
               </p>
             </div>
