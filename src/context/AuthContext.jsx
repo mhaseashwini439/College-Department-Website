@@ -1,19 +1,24 @@
 import { createContext, useContext, useState, useCallback } from 'react';
 
-const AuthContext = createContext(null);
+import { apiService } from '../services/api';
 
-const CREDENTIALS = { username: 'admin', password: 'admin123' };
+const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return sessionStorage.getItem('admin_auth') === 'true';
   });
 
-  const login = useCallback((username, password) => {
-    if (username === CREDENTIALS.username && password === CREDENTIALS.password) {
-      setIsAuthenticated(true);
-      sessionStorage.setItem('admin_auth', 'true');
-      return true;
+  const login = useCallback(async (username, password) => {
+    try {
+      const response = await apiService.login(username, password);
+      if (response && response.success) {
+        setIsAuthenticated(true);
+        sessionStorage.setItem('admin_auth', 'true');
+        return true;
+      }
+    } catch (error) {
+      console.error('Login error:', error);
     }
     return false;
   }, []);

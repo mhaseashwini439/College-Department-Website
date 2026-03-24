@@ -99,7 +99,7 @@ export const initialData = {
 };
 
 // Keys used in localStorage
-const STORAGE_KEY = 'cs_dept_data_v4';
+const STORAGE_KEY = 'cs_dept_data_v5';
 
 export function loadData() {
   const stored = localStorage.getItem(STORAGE_KEY);

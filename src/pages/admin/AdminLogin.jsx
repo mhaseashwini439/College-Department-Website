@@ -16,9 +16,10 @@ export default function AdminLogin() {
     return null;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (login(username, password)) {
+    const success = await login(username, password);
+    if (success) {
       navigate('/admin/dashboard');
     } else {
       setError('Invalid username or password');
