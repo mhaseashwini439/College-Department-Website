@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --navy: #1E3A5F;
+  --navy-light: #2a4d7a;
+  --navy-dark: #152c49;
+  --primary: #2563EB;
+  --primary-hover: #1d4ed8;
+  --section-bg: #F8FAFC;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
 
 @layer base {
   * {
@@ -15,7 +28,7 @@
 
   body {
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    color: #1f2937;
+    color: #334155;
     background-color: #ffffff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -23,8 +36,10 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
     line-height: 1.2;
     font-weight: 700;
+    color: var(--navy);
   }
 
   a {
