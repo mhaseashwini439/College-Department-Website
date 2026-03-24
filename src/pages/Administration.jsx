@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield } from 'lucide-react';
-import StaffImage from '../components/StaffImage';
+import { useState } from 'react';
 import FacultyCard from '../components/FacultyCard';
+import StaffImage from '../components/StaffImage';
 import { useData } from '../context/DataContext';
 
 const fadeUp = {
@@ -32,13 +32,13 @@ export default function Administration() {
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
           {[
-            { title: 'Principal',                  name: 'Dr. B. B. Sagade',    imageUrl: '/Administration/Dr. B. B. Sagade.jpeg' },
-            { title: 'Vice Principal (Science)',    name: 'Dr. A. E. Athare',    imageUrl: '/Administration/Dr. A. E. Athare.jpeg' },
-            { title: 'Vice Principal (Commerce)',   name: 'Dr. S. B. Kalamkar',  imageUrl: '/Administration/Dr. S. B. Kalamkar.jpeg' },
+            { title: 'Principal', name: 'Dr. B. B. Sagade', imageUrl: '/Administration/Dr. B. B. Sagade.jpeg' },
+            { title: 'Vice Principal (Science)', name: 'Dr. A. E. Athare', imageUrl: '/Administration/Dr. A. E. Athare.jpeg' },
+            { title: 'Vice Principal (Commerce)', name: 'Dr. S. B. Kalamkar', imageUrl: '/Administration/Dr. S. B. Kalamkar.jpeg' },
           ].map(person => (
             <div key={person.title} className="flex items-center gap-6 bg-white rounded-xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-               <StaffImage 
-                src={person.imageUrl} 
+              <StaffImage
+                src={person.imageUrl}
                 alt={person.name}
                 size="md"
               />
