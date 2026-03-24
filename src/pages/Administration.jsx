@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield } from 'lucide-react';
-import PlaceholderImage from '../components/PlaceholderImage';
+import StaffImage from '../components/StaffImage';
+import FacultyCard from '../components/FacultyCard';
 import { useData } from '../context/DataContext';
 
 const fadeUp = {
@@ -10,6 +12,11 @@ const fadeUp = {
 
 export default function Administration() {
   const { data } = useData();
+  const [openCardId, setOpenCardId] = useState(null);
+
+  const handleToggle = (id) => {
+    setOpenCardId(prev => prev === id ? null : id);
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -29,11 +36,16 @@ export default function Administration() {
             { title: 'Vice Principal (Science)', name: 'Dr. A. E. Athare' },
             { title: 'Vice Principal (Commerce)', name: 'Dr. S. B. Kalamkar' },
           ].map(person => (
-            <div key={person.title} className="flex items-center gap-4 bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
-              <PlaceholderImage label={person.title} height="100px" className="w-24 shrink-0 !rounded-lg" />
-              <div>
-                <span className="text-xs font-semibold text-primary uppercase">{person.title}</span>
-                <h3 className="text-lg font-bold text-navy">{person.name}</h3>
+            <div key={person.title} className="flex items-center gap-6 bg-white rounded-xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+               <StaffImage 
+              src={`/administration/${person.name}.jpeg`} 
+                alt={person.name}
+                size="md"
+              />
+              <div className="flex-1">
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">{person.title}</span>
+                <h3 className="text-xl font-bold text-navy mt-1">{person.name}</h3>
+                <div className="w-8 h-0.5 bg-gray-100 mt-2" />
               </div>
             </div>
           ))}
@@ -45,14 +57,14 @@ export default function Administration() {
         <h2 className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
           <Shield size={20} className="text-primary" /> Department Faculty
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.faculty.map(f => (
-            <div key={f.id} className="bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md transition-shadow text-center">
-              <PlaceholderImage label="Faculty Photo" height="120px" className="w-28 mx-auto !rounded-full mb-3" />
-              <h3 className="font-bold text-navy">{f.name}</h3>
-              <p className="text-sm text-primary">{f.designation}</p>
-              <p className="text-xs text-gray-500 mt-1">{f.qualification}</p>
-            </div>
+            <FacultyCard
+              key={f.id}
+              faculty={f}
+              isOpen={openCardId === f.id}
+              onToggle={() => handleToggle(f.id)}
+            />
           ))}
         </div>
       </motion.div>
