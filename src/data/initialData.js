@@ -115,11 +115,7 @@ export const initialData = {
 };
 
 // Keys used in localStorage
-<<<<<<< HEAD
-const STORAGE_KEY = 'cs_dept_data_v5';
-=======
 const STORAGE_KEY = 'cs_dept_data_v7';
->>>>>>> dc5ea5a3dc64224340482db31ca775d955b3fec4
 
 export function loadData() {
   const stored = localStorage.getItem(STORAGE_KEY);

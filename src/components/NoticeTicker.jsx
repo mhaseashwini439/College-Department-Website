@@ -10,20 +10,12 @@ export default function NoticeTicker() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="bg-primary-light border-b border-blue-100 relative z-30">
-      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center gap-3">
-        <span className="shrink-0 px-2 py-0.5 bg-primary text-white text-xs font-bold rounded shadow-sm z-10">
-          NOTICES
-        </span>
-=======
     <div className="bg-white/70 backdrop-blur-md border-b border-gray-200/50 sticky top-[129px] md:top-[161px] z-[45] font-outfit">
       <div className="max-w-7xl mx-auto px-4 py-1.5 flex items-center gap-4">
         <div className="shrink-0 flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-lg shadow-sm z-10 uppercase tracking-widest border border-primary/20">
           <Bell size={12} className="animate-bounce" />
           Notices
         </div>
->>>>>>> dc5ea5a3dc64224340482db31ca775d955b3fec4
         <div className="overflow-hidden whitespace-nowrap mask-edges relative flex-1">
           <div className="inline-block animate-marquee hover:[animation-play-state:paused] cursor-pointer py-1">
             {data.notices.map((n, i) => (
