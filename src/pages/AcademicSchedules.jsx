@@ -43,7 +43,7 @@ export default function AcademicSchedules() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-hover transition-colors w-full justify-center"
               >
-                <FileText size={14} /> View PDF
+                <FileText size={14} /> View/Download
               </a>
             </div>
           ))}

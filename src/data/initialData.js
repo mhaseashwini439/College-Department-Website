@@ -39,10 +39,24 @@ export const initialData = {
   ],
 
   syllabus: [
-    { id: 1, year: "FY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/Fy-B.-Sc.-Computer-Sciecne-2024-25.pdf", pyqUrl: "#" },
+    { id: 1, year: "FY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/Fy-B.-Sc.-Computer-Science-2024-25.pdf", pyqUrl: "#" },
     { id: 2, year: "SY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/SY B. Sc. Major syllabus template for Printout.pdf", pyqUrl: "#" },
     { id: 3, year: "TY B.Sc. CS", level: "UG", semester: "All", syllabusUrl: "/Information/Syllabus/TYBSC  Computer Science Major SYLLABUS 2025-26 FINAL.pdf", pyqUrl: "#" },
-    { id: 4, year: "M.Sc. CS", level: "PG", semester: "All", syllabusUrl: "/Information/Syllabus/M.SC New PG Syllabus Template for Major in Science Faculty Final (1).pdf", pyqUrl: "#" },
+    { id: 4, year: "M.Sc. CS - I", level: "PG", semester: "Sem I & II", syllabusUrl: "/Information/Syllabus/MSc_CS_Part_1_Syllabus.pdf", pyqUrl: "#" },
+    { id: 5, year: "M.Sc. CS - II", level: "PG", semester: "Sem III & IV", syllabusUrl: "/Information/Syllabus/MSc_CS_Part_2_Syllabus.pdf", pyqUrl: "#" },
+  ],
+
+  results: [
+    { id: 1, title: "FY B.Sc. CS", semester: "Semester I", date: "Jan 2024", pdfUrl: "/Information/Results/fy_sem1.pdf" },
+    { id: 2, title: "FY B.Sc. CS", semester: "Semester II", date: "April 2024", pdfUrl: "/Information/Results/fy_sem2.pdf" },
+    { id: 3, title: "SY B.Sc. CS", semester: "Semester III", date: "Jan 2024", pdfUrl: "/Information/Results/sy_sem3.pdf" },
+    { id: 4, title: "SY B.Sc. CS", semester: "Semester IV", date: "April 2024", pdfUrl: "/Information/Results/sy_sem4.pdf" },
+    { id: 5, title: "TY B.Sc. CS", semester: "Semester V", date: "Jan 2024", pdfUrl: "/Information/Results/ty_sem5.pdf" },
+    { id: 6, title: "TY B.Sc. CS", semester: "Semester VI", date: "April 2024", pdfUrl: "/Information/Results/ty_sem6.pdf" },
+    { id: 7, title: "M.Sc. CS - I", semester: "Semester I", date: "Jan 2024", pdfUrl: "/Information/Results/msc1_sem1.pdf" },
+    { id: 8, title: "M.Sc. CS - I", semester: "Semester II", date: "April 2024", pdfUrl: "/Information/Results/msc1_sem2.pdf" },
+    { id: 9, title: "M.Sc. CS - II", semester: "Semester III", date: "Jan 2024", pdfUrl: "/Information/Results/msc2_sem3.pdf" },
+    { id: 10, title: "M.Sc. CS - II", semester: "Semester IV", date: "April 2024", pdfUrl: "/Information/Results/msc2_sem4.pdf" },
   ],
 
   toppers: [],
@@ -64,34 +78,36 @@ export const initialData = {
     social: [],
   },
 
+  skillPrograms: [],
+
   books: {
     "FY": [
-      { id: 1, subject: "Problem Solving using C", publication: "Nirali Prakashan", pdfUrl: "#" },
-      { id: 2, subject: "Database Management Systems", publication: "Pearson", pdfUrl: "#" },
-      { id: 3, subject: "Discrete Mathematics", publication: "McGraw Hill", pdfUrl: "#" },
-      { id: 4, subject: "Digital Electronics", publication: "Technical Publications", pdfUrl: "#" },
+      { id: 1, subject: "Problem Solving using C", semester: "Semester I", referenceBookUrl: "https://www.unf.edu/~wkloster/2220/ppts/cprogramming_tutorial.pdf", labBookUrl: "https://www.vssut.ac.in/lecture_notes/lecture1424354156.pdf", normalBookUrl: "https://powerunit-ju.com/wp-content/uploads/2021/04/Yashavant-Kanetkar-Let-Us-C.pdf", videoUrl: "https://www.youtube.com/watch?v=K37Z6O1o5OI", thumbnailUrl: "https://img.youtube.com/vi/K37Z6O1o5OI/hqdefault.jpg", referenceBookName: "The C Programming Language (Ritchie)", labBookName: "C Lab Manual Ver 2.0", normalBookName: "Let Us C (Kanetkar)", icon: "Code", tags: ["Important", "Most Viewed"], duration: "12:45" },
+      { id: 2, subject: "Database Management Systems", semester: "Semester I", referenceBookUrl: "https://pages.cs.wisc.edu/~dbms/slides/dbms_concepts.pdf", labBookUrl: "https://www.db-book.com/db7/university-material/slides/index.html", normalBookUrl: "https://web.stanford.edu/class/cs145/slides/intro.pdf", videoUrl: "https://www.youtube.com/watch?v=7S_tz1z_5bA", thumbnailUrl: "https://img.youtube.com/vi/7S_tz1z_5bA/hqdefault.jpg", referenceBookName: "DBMS Concepts (Korth)", labBookName: "SQL Lab Guide", normalBookName: "Database Systems (Pearson)", icon: "Database", tags: ["Core Subject"], duration: "15:20" },
+      { id: 3, subject: "Discrete Mathematics", semester: "Semester II", referenceBookUrl: "https://www.cs.princeton.edu/courses/archive/spr10/cos226/lectures.php", labBookUrl: "https://www.cs.columbia.edu/~cs4205/files/CM2.pdf", normalBookUrl: "https://web.stanford.edu/class/cs103x/cs103x-notes.pdf", videoUrl: "https://www.youtube.com/watch?v=tyDKR4FG3Yw", thumbnailUrl: "https://img.youtube.com/vi/tyDKR4FG3Yw/hqdefault.jpg", referenceBookName: "Discrete Math (Rosen)", labBookName: "Problem Sets", normalBookName: "Discrete Structures (MH)", icon: "Grid", tags: ["Mathematical"], duration: "10:15" },
+      { id: 4, subject: "Digital Electronics", semester: "Semester II", referenceBookUrl: "https://www.electronics-tutorials.ws/binary/bin_1.html", labBookUrl: "https://www.tutorialspoint.com/digital_circuits/digital_circuits_tutorial.pdf", normalBookUrl: "https://nptel.ac.in/content/storage2/courses/117106086/Lecture%201.pdf", videoUrl: "https://www.youtube.com/watch?v=M0mx8S05v60", thumbnailUrl: "https://img.youtube.com/vi/M0mx8S05v60/hqdefault.jpg", referenceBookName: "Digital Design (Mano)", labBookName: "Circuit Design Lab", normalBookName: "Modern Digital Electronics (Jain)", icon: "Cpu", tags: ["Fundamental"], duration: "08:50" },
     ],
     "SY": [
-      { id: 1, subject: "Data Structures using C", publication: "Oxford University Press", pdfUrl: "#" },
-      { id: 2, subject: "Software Engineering", publication: "Pressman (McGraw Hill)", pdfUrl: "#" },
-      { id: 3, subject: "Operating Systems", publication: "Galvin (Wiley)", pdfUrl: "#" },
-      { id: 4, subject: "Computer Networks", publication: "Tanenbaum (Pearson)", pdfUrl: "#" },
+      { id: 1, subject: "Data Structures using C", semester: "Semester I", referenceBookUrl: "https://www.cs.bham.ac.uk/~jxb/DSA/dsa.pdf", labBookUrl: "https://www.cs.yale.edu/homes/aspnes/classes/223/notes.pdf", normalBookUrl: "https://algs4.cs.princeton.edu/home/", videoUrl: "https://www.youtube.com/watch?v=B31LgI4Y4Is", thumbnailUrl: "https://img.youtube.com/vi/B31LgI4Y4Is/hqdefault.jpg", referenceBookName: "Data Structures (Horowitz)", labBookName: "DS Practical Lab", normalBookName: "DS using C (Lipschutz)", icon: "Layers", tags: ["Most Viewed", "Placement Focus"], duration: "20:30" },
+      { id: 2, subject: "Software Engineering", semester: "Semester I", referenceBookUrl: "https://laney.edu/p_atashband/wp-content/uploads/sites/139/2016/09/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf", labBookUrl: "https://www.vssut.ac.in/lecture_notes/lecture1428551142.pdf", normalBookUrl: "https://www.facweb.iitkgp.ac.in/~rjm/courses/soft.html", videoUrl: "https://www.youtube.com/watch?v=O753uuutq68", thumbnailUrl: "https://img.youtube.com/vi/O753uuutq68/hqdefault.jpg", referenceBookName: "Software Eng. (Pressman)", labBookName: "UML Design Guide", normalBookName: "Software Engineering (Mall)", icon: "GitBranch", tags: ["Process Oriented"], duration: "14:10" },
+      { id: 3, subject: "Operating Systems", semester: "Semester II", referenceBookUrl: "https://codex.cs.yale.edu/avi/os-book/OS10/slides/index.html", labBookUrl: "https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/", normalBookUrl: "https://pages.cs.wisc.edu/~remzi/OSTEP/", videoUrl: "https://www.youtube.com/watch?v=vBURTt97EkA", thumbnailUrl: "https://img.youtube.com/vi/vBURTt97EkA/hqdefault.jpg", referenceBookName: "OS Concepts (Galvin)", labBookName: "Unix/Linux Lab", normalBookName: "Operating Systems (Tanenbaum)", icon: "HardDrive", tags: ["Core Concepts"], duration: "18:25" },
+      { id: 4, subject: "Computer Networks", semester: "Semester II", referenceBookUrl: "https://www.pearson.com/us/higher-education/program/Tanenbaum-Computer-Networks-5th-Edition/PGM270619.html", labBookUrl: "https://intronetworks.cs.luc.edu/current/html/index.html", normalBookUrl: "https://web.stanford.edu/class/cs244/lectures.html", videoUrl: "https://www.youtube.com/watch?v=IPvYjXWTe6Y", thumbnailUrl: "https://img.youtube.com/vi/IPvYjXWTe6Y/hqdefault.jpg", referenceBookName: "Computer Networks (Tanenbaum)", labBookName: "Networking Lab", normalBookName: "Data Comm (Forouzan)", icon: "Share2", tags: ["Infrastructure"], duration: "16:40" },
     ],
     "TY": [
-      { id: 1, subject: "Artificial Intelligence", publication: "PHI Publications", pdfUrl: "#" },
-      { id: 2, subject: "Web Technologies", publication: "Nirali Prakashan", pdfUrl: "#" },
-      { id: 3, subject: "Machine Learning", publication: "O'Reilly Media", pdfUrl: "#" },
-      { id: 4, subject: "Information Security", publication: "McGraw Hill", pdfUrl: "#" },
+      { id: 1, subject: "Artificial Intelligence", semester: "Semester I", referenceBookUrl: "https://aima.cs.berkeley.edu/", labBookUrl: "https://www.cs.ubc.ca/~poole/aibook/html/ArtInt.html", normalBookUrl: "https://web.stanford.edu/class/cs221/", videoUrl: "https://www.youtube.com/watch?v=JMUxmLgwRY8", thumbnailUrl: "https://img.youtube.com/vi/JMUxmLgwRY8/hqdefault.jpg", referenceBookName: "AI: A Modern Approach (Russell)", labBookName: "Prolog Workshop", normalBookName: "Introduction to AI (Charniak)", icon: "Brain", tags: ["Advanced", "Trending"], duration: "25:15" },
+      { id: 2, subject: "Web Technologies", semester: "Semester I", referenceBookUrl: "https://web.stanford.edu/class/cs142/lectures.html", labBookUrl: "https://www.w3schools.com/", normalBookUrl: "https://developer.mozilla.org/en-US/docs/Learn", videoUrl: "https://www.youtube.com/watch?v=tVzUXW6siu0", thumbnailUrl: "https://img.youtube.com/vi/tVzUXW6siu0/hqdefault.jpg", referenceBookName: "Web Design (Deitel)", labBookName: "Full Stack Lab", normalBookName: "Web Tech (Godbole)", icon: "Globe", tags: ["Hands-on"], duration: "30:00" },
+      { id: 3, subject: "Machine Learning", semester: "Semester II", referenceBookUrl: "https://cs229.stanford.edu/notes/", labBookUrl: "https://scikit-learn.org/stable/tutorial/index.html", normalBookUrl: "https://www.deeplearningbook.org/", videoUrl: "https://www.youtube.com/watch?v=GwIo3gDZCVQ", thumbnailUrl: "https://img.youtube.com/vi/GwIo3gDZCVQ/hqdefault.jpg", referenceBookName: "Machine Learning (Tom Mitchell)", labBookName: "Scikit-learn Practical", normalBookName: "ML (O'Reilly)", icon: "BarChart", tags: ["Math Heavy", "Most Prepared"], duration: "22:15" },
+      { id: 4, subject: "Information Security", semester: "Semester II", referenceBookUrl: "https://crypto.stanford.edu/~dabo/cs255/notes.html", labBookUrl: "https://www.owasp.org/index.php/Main_Page", normalBookUrl: "https://nptel.ac.in/courses/106/105/106105031/", videoUrl: "https://www.youtube.com/watch?v=bW9N_Eosv80", thumbnailUrl: "https://img.youtube.com/vi/bW9N_Eosv80/hqdefault.jpg", referenceBookName: "Crypto & Network Security (Stallings)", labBookName: "Security Lab", normalBookName: "Network Security (Kaufman)", icon: "Shield", tags: ["Crucial"], duration: "13:20" },
     ],
     "MSC-I": [
-      { id: 1, subject: "Advanced Algorithms", publication: "Cormen (MIT Press)", pdfUrl: "#" },
-      { id: 2, subject: "Cloud Computing", publication: "Wiley Publications", pdfUrl: "#" },
-      { id: 3, subject: "Advanced Database Systems", publication: "Pearson", pdfUrl: "#" },
+      { id: 1, subject: "Advanced Algorithms", semester: "Semester I", referenceBookUrl: "https://theory.stanford.edu/~trevisan/books/notes.pdf", labBookUrl: "https://www.cs.princeton.edu/courses/archive/spr04/cos226/lectures.php", normalBookUrl: "https://web.stanford.edu/class/cs161/", videoUrl: "https://www.youtube.com/watch?v=0IAPZzGSbME", thumbnailUrl: "https://img.youtube.com/vi/0IAPZzGSbME/hqdefault.jpg", referenceBookName: "Algorithms (Cormen)", labBookName: "Algo Lab", normalBookName: "Algorithm Design (Kleinberg)", icon: "Zap", tags: ["High Level"], duration: "19:40" },
+      { id: 2, subject: "Cloud Computing", semester: "Semester I", referenceBookUrl: "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf", labBookUrl: "https://aws.amazon.com/whitepapers/", normalBookUrl: "https://azure.microsoft.com/en-us/resources/whitepapers/", videoUrl: "https://www.youtube.com/watch?v=M988_fsOSWo", thumbnailUrl: "https://img.youtube.com/vi/M988_fsOSWo/hqdefault.jpg", referenceBookName: "Cloud Computing (Wiley)", labBookName: "AWS/Azure Practical", normalBookName: "Cloud Services (Pearson)", icon: "Cloud", tags: ["Industry Standard"], duration: "17:30" },
+      { id: 3, subject: "Advanced Database Systems", semester: "Semester II", referenceBookUrl: "https://web.stanford.edu/class/cs245/notes.html", labBookUrl: "https://www.mongodb.com/docs/", normalBookUrl: "https://cassandra.apache.org/doc/latest/", videoUrl: "https://www.youtube.com/watch?v=W2Z7G8Lp_h8", thumbnailUrl: "https://img.youtube.com/vi/W2Z7G8Lp_h8/hqdefault.jpg", referenceBookName: "DB Design (Garcia-Molina)", labBookName: "NoSQL Practical", normalBookName: "Database Internals (O'Reilly)", icon: "Terminal", tags: ["Optimization"], duration: "21:10" },
     ],
     "MSC-II": [
-      { id: 1, subject: "Big Data Analytics", publication: "Packt Publishing", pdfUrl: "#" },
-      { id: 2, subject: "Deep Learning", publication: "O'Reilly Media", pdfUrl: "#" },
-      { id: 3, subject: "Internet of Things", publication: "PHI Publications", pdfUrl: "#" },
+      { id: 1, subject: "Big Data Analytics", semester: "Semester I", referenceBookUrl: "https://spark.apache.org/docs/latest/", labBookUrl: "https://hadoop.apache.org/docs/stable/", normalBookUrl: "https://kafka.apache.org/documentation/", videoUrl: "https://www.youtube.com/watch?v=bAyrObl7TYE", thumbnailUrl: "https://img.youtube.com/vi/bAyrObl7TYE/hqdefault.jpg", referenceBookName: "Hadoop (Packt)", labBookName: "Spark/Hadoop Lab", normalBookName: "Big Data (Marz)", icon: "Server", tags: ["Scalable"], duration: "24:50" },
+      { id: 2, subject: "Deep Learning", semester: "Semester I", referenceBookUrl: "https://www.deeplearningbook.org/slides/index.html", labBookUrl: "https://pytorch.org/tutorials/", normalBookUrl: "https://www.tensorflow.org/tutorials", videoUrl: "https://www.youtube.com/watch?v=6M5VXNMfJ24", thumbnailUrl: "https://img.youtube.com/vi/6M5VXNMfJ24/hqdefault.jpg", referenceBookName: "Deep Learning (Goodfellow)", labBookName: "PyTorch Practical", normalBookName: "DL with Python (Chollet)", icon: "Workflow", tags: ["Complex"], duration: "35:00" },
+      { id: 3, subject: "Internet of Things", semester: "Semester II", referenceBookUrl: "https://www.arduino.cc/en/Tutorial/HomePage", labBookUrl: "https://projects.raspberrypi.org/en", normalBookUrl: "https://docs.microsoft.com/en-us/azure/iot-hub/", videoUrl: "https://www.youtube.com/watch?v=h0gWfVCSGQQ", thumbnailUrl: "https://img.youtube.com/vi/h0gWfVCSGQQ/hqdefault.jpg", referenceBookName: "IoT (PHI)", labBookName: "Arduino/RPi Practical", normalBookName: "IoT Systems (Wiley)", icon: "Wifi", tags: ["Hardware"], duration: "16:20" },
     ],
   },
 
@@ -99,7 +115,11 @@ export const initialData = {
 };
 
 // Keys used in localStorage
+<<<<<<< HEAD
 const STORAGE_KEY = 'cs_dept_data_v5';
+=======
+const STORAGE_KEY = 'cs_dept_data_v7';
+>>>>>>> dc5ea5a3dc64224340482db31ca775d955b3fec4
 
 export function loadData() {
   const stored = localStorage.getItem(STORAGE_KEY);
