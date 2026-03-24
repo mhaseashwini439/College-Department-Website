@@ -38,7 +38,7 @@ export default function Administration() {
           ].map(person => (
             <div key={person.title} className="flex items-center gap-6 bg-white rounded-xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                <StaffImage 
-              src={`/administration/${person.name}.jpeg`} 
+              src={`/Administration/${person.name}.jpeg`} 
                 alt={person.name}
                 size="md"
               />
