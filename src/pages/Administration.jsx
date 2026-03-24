@@ -32,13 +32,13 @@ export default function Administration() {
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
           {[
-            { title: 'Principal', name: 'Dr. B. B. Sagade' },
-            { title: 'Vice Principal (Science)', name: 'Dr. A. E. Athare' },
-            { title: 'Vice Principal (Commerce)', name: 'Dr. S. B. Kalamkar' },
+            { title: 'Principal',                  name: 'Dr. B. B. Sagade',    imageUrl: '/administration/sagade_bb.jpg' },
+            { title: 'Vice Principal (Science)',    name: 'Dr. A. E. Athare',    imageUrl: '/administration/athare_ae.jpg' },
+            { title: 'Vice Principal (Commerce)',   name: 'Dr. S. B. Kalamkar',  imageUrl: '/administration/kalamkar_sb.jpg' },
           ].map(person => (
             <div key={person.title} className="flex items-center gap-6 bg-white rounded-xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                <StaffImage 
-              src={`/Administration/${person.name}.jpeg`} 
+                src={person.imageUrl} 
                 alt={person.name}
                 size="md"
               />
