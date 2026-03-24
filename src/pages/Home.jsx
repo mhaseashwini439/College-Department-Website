@@ -30,30 +30,20 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-[#0B1120] overflow-hidden py-20">
+      <section className="relative min-h-[90vh] flex items-center bg-[#2A1608] overflow-hidden py-20">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div 
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.1, 0.2, 0.1],
-              x: [0, 50, 0],
-              y: [0, -30, 0]
-            }}
+            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1], x: [0, 50, 0], y: [0, -30, 0] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-primary/30 rounded-full blur-[120px]" 
+            className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[120px]" 
           />
           <motion.div 
-            animate={{ 
-              scale: [1, 1.3, 1],
-              opacity: [0.1, 0.15, 0.1],
-              x: [0, -40, 0],
-              y: [0, 60, 0]
-            }}
+            animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.15, 0.1], x: [0, -40, 0], y: [0, 60, 0] }}
             transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] bg-blue-500/20 rounded-full blur-[140px]" 
+            className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] bg-navy/30 rounded-full blur-[140px]" 
           />
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(42,22,8,0.8)_100%)]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 z-10 w-full">
@@ -61,91 +51,112 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch"
           >
-            {/* Left: Content */}
-            <div className="lg:col-span-7 text-center lg:text-left">
-              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary-light text-xs font-bold mb-6 tracking-wider uppercase">
-                <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
-                Empowering Innovation
-              </motion.div>
-              
-              <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.1] font-outfit">
-                Master the Future of <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-emerald-400">Computer Science</span>
-              </motion.h1>
-              
-              <motion.p variants={fadeUp} className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                Join a legacy of excellence at AJMVPS College. Our department blends cutting-edge technology with academic rigor to shape the tech leaders of tomorrow.
-              </motion.p>
-              
-              <motion.div variants={fadeUp} className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            {/* COLUMN 1: Placement Growth Chart */}
+            <motion.div variants={fadeUp} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col">
+              <div className="text-[10px] text-primary font-black uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary animate-ping inline-block" />
+                Year-wise Placements
+              </div>
+              <div className="flex-1">
+                <ChartComponent title="Placements" data={placementData} dataKey="students" color="#F7931D" hideTitle />
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+                <div>
+                  <div className="text-white font-black text-xl">100+</div>
+                  <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest">Annual Placements</div>
+                </div>
+                <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Award size={16} className="text-primary" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* COLUMN 2: Department of Computer Science + Buttons */}
+            <motion.div variants={fadeUp} className="text-center flex flex-col items-center justify-center gap-5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] font-black uppercase tracking-[0.2em]">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
+                Welcome to
+              </div>
+
+              <div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-white font-outfit leading-tight tracking-tight">
+                  Department of
+                </h1>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black font-outfit leading-tight tracking-tight">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-orange-400 to-primary-hover">
+                    Computer Science
+                  </span>
+                </h2>
+              </div>
+
+              <p className="text-gray-400 text-xs md:text-sm leading-relaxed font-medium max-w-[200px]">
+                Shaping future tech leaders through quality education at Ahmednagar Jilha Maratha Vidya Prasark Samaja's College.
+              </p>
+
+              <div className="flex flex-col gap-3 w-full">
                 <Link
                   to="/admission"
-                  className="group relative inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-primary-hover transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] overflow-hidden"
+                  className="group relative w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-white font-bold rounded-2xl hover:bg-primary-hover transition-all duration-300 shadow-[0_0_15px_rgba(247,147,29,0.3)] overflow-hidden text-sm"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                  Apply for UG <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  Apply UG <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/admission"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-sm text-sm"
                 >
-                  Apply for PG <ArrowRight size={18} />
+                  Apply PG <ArrowRight size={14} />
                 </Link>
-              </motion.div>
+              </div>
+            </motion.div>
 
-              <motion.div variants={fadeUp} className="mt-12 flex items-center justify-center lg:justify-start gap-8 opacity-60">
-                <div className="text-center lg:text-left">
-                  <div className="text-2xl font-bold text-white">A++</div>
-                  <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">NAAC Grade</div>
+            {/* COLUMN 3: Department Video */}
+            <motion.div variants={fadeUp} className="bg-slate-800/80 rounded-3xl overflow-hidden relative group border border-white/5 shadow-2xl min-h-[280px]">
+              <img 
+                src="/Information/Dept Event Photh/DSC_5086.JPG" 
+                alt="Department Video" 
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="w-16 h-16 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-[0_0_25px_rgba(247,147,29,0.6)] cursor-pointer"
+                >
+                  <Play size={24} fill="white" className="text-white ml-1" />
+                </motion.div>
+              </div>
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                <div className="text-[10px] text-primary font-black uppercase tracking-[0.2em] mb-1 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping inline-block" />
+                  Department Video
                 </div>
-                <div className="w-px h-10 bg-white/10" />
-                <div className="text-center lg:text-left">
-                  <div className="text-2xl font-bold text-white">100+</div>
-                  <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Annual Placements</div>
-                </div>
-              </motion.div>
-            </div>
+                <p className="text-white/60 text-[10px] font-medium">Take a Virtual Tour</p>
+              </div>
+            </motion.div>
 
-            {/* Right: Visual Elements */}
-            <div className="lg:col-span-5 relative">
-              <motion.div
-                variants={fadeUp}
-                className="grid gap-4"
-              >
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4 pt-12">
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 overflow-hidden shadow-2xl">
-                      <ChartComponent title="Placements" data={placementData} dataKey="students" color="#2563EB" hideTitle />
-                    </div>
-                    <div className="bg-gradient-to-br from-primary to-blue-600 rounded-3xl p-6 text-white shadow-2xl">
-                      <GraduationCap size={32} className="mb-4 text-white/80" />
-                      <div className="text-2xl font-bold">220+</div>
-                      <div className="text-xs text-white/60 font-medium">New Admissions</div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden relative group border border-white/5 shadow-2xl">
-                        <img 
-                          src="/Information/Dept Event Photh/DSC_5086.JPG" 
-                          alt="Lab" 
-                          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                            <div className="flex items-center gap-2 text-white">
-                                <Play size={16} fill="white" />
-                                <span className="text-[10px] font-bold uppercase tracking-wider">Campus Tour</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 overflow-hidden shadow-2xl">
-                      <ChartComponent title="Network" data={alumniData} dataKey="network" color="#10B981" hideTitle />
-                    </div>
-                  </div>
+            {/* COLUMN 4: Alumni Network Growth Chart */}
+            <motion.div variants={fadeUp} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col">
+              <div className="text-[10px] text-primary font-black uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary animate-ping inline-block" />
+                Alumni Network Growth
+              </div>
+              <div className="flex-1">
+                <ChartComponent title="Network" data={alumniData} dataKey="network" color="#073B6B" hideTitle />
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+                <div>
+                  <div className="text-white font-black text-xl">1450+</div>
+                  <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest">Alumni Network</div>
                 </div>
-              </motion.div>
-            </div>
+                <div className="w-8 h-8 rounded-xl bg-navy/30 flex items-center justify-center">
+                  <GraduationCap size={16} className="text-navy-light" />
+                </div>
+              </div>
+            </motion.div>
+
           </motion.div>
         </div>
       </section>
@@ -160,9 +171,9 @@ export default function Home() {
       >
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: Users, label: 'Academic Programs', value: '3+', color: 'bg-blue-500' },
-            { icon: GraduationCap, label: 'Expert Faculty', value: '12+', color: 'bg-emerald-500' },
-            { icon: BookOpen, label: 'Advanced Labs', value: '4', color: 'bg-amber-500' },
+            { icon: Users, label: 'Academic Programs', value: '3+', color: 'bg-orange-500' },
+            { icon: GraduationCap, label: 'Expert Faculty', value: '12+', color: 'bg-navy' },
+            { icon: BookOpen, label: 'Advanced Labs', value: '4', color: 'bg-accent' },
             { icon: Award, label: 'Student Intake', value: '220', color: 'bg-primary' },
           ].map((stat, idx) => (
             <motion.div
@@ -197,7 +208,7 @@ export default function Home() {
                 <span className="text-primary italic">Academic Excellence</span>
               </h2>
               <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                AJMVPS New Arts, Commerce & Science College, established in 1918, is a premier institution dedicated to empowering students through knowledge and values.
+                Ahmednagar Jilha Maratha Vidya Prasark Samaja's New Arts Commerce &amp; Science College, established in 1918, is a premier institution dedicated to empowering students through knowledge and values.
               </p>
               <div className="space-y-4 mb-10">
                 {[
@@ -247,9 +258,9 @@ export default function Home() {
                 <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
                     <img src="/Information/Dept Event Photh/DSC_5086.JPG" alt="Department Lab" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
                 </div>
-                <div className="absolute -top-6 -left-6 bg-navy p-6 rounded-3xl shadow-xl hidden md:block">
+                <div className="absolute -top-6 -left-6 bg-primary p-6 rounded-3xl shadow-xl hidden md:block">
                     <div className="text-3xl font-bold text-white">12+</div>
-                    <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Expert Faculty</div>
+                    <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest">Expert Faculty</div>
                 </div>
             </motion.div>
             <motion.div variants={fadeUp} className="order-1 lg:order-2">

@@ -35,14 +35,14 @@ export default function Header() {
                 />
               </div>
               <div className="hidden sm:block text-left">
-                <h1 className="text-sm md:text-lg font-extrabold text-navy leading-tight tracking-tight font-outfit">
-                  AJMVPS New Arts, Commerce & Science College
+                <h1 className="text-[9px] md:text-[11px] font-extrabold text-navy leading-tight tracking-tight font-outfit uppercase whitespace-nowrap">
+                  Ahmednagar Jilha Maratha Vidya Prasark Samaja's New Arts Commerce &amp; Science College
                 </h1>
-                <h2 className="text-xs md:text-xl font-bold text-red-600 mt-0.5 font-outfit">
+                <h2 className="text-sm md:text-3xl font-black text-primary mt-0.5 font-outfit uppercase tracking-tight drop-shadow-sm">
                   Department of Computer Science
                 </h2>
-                <p className="text-[10px] md:text-xs text-slate-500 mt-0.5 font-medium flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                <p className="text-[10px] md:text-xs text-slate-500 mt-1 font-bold flex items-center gap-2 border-l-2 border-accent pl-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   NAAC 'A++' Accredited (CGPA 3.79)
                 </p>
               </div>

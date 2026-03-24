@@ -8,16 +8,21 @@ export default {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#1E3A5F',
-          light: '#2a4d7a',
-          dark: '#152c49',
+          DEFAULT: '#073B6B',
+          light: '#0d4a85',
+          dark: '#052c52',
         },
-        'section-bg': '#F0F4F8',
+        'section-bg': '#F8FAFC',
         primary: {
-          DEFAULT: '#2563EB',
-          hover: '#1d4ed8',
-          light: '#dbeafe',
+          DEFAULT: '#F7931D',
+          hover: '#F39314',
+          light: '#fff4e6',
         },
+        accent: {
+          DEFAULT: '#7B191E',
+          light: '#9e2a31',
+        },
+        'bg-dark': '#2A1608',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],

@@ -30,7 +30,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0B1120] text-gray-400 pt-20 pb-10 relative overflow-hidden ring-1 ring-white/5">
+    <footer className="bg-[#2A1608] text-gray-400 pt-20 pb-10 relative overflow-hidden ring-1 ring-white/5">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       
@@ -44,14 +44,17 @@ export default function Footer() {
                 <GraduationCap size={24} className="text-white group-hover:text-primary transition-colors" />
               </div>
               <div className="text-left">
-                <h3 className="text-white font-bold leading-tight font-outfit uppercase tracking-tighter text-lg">
-                  AJMVPS <br />
+                <h3 className="text-white font-bold leading-snug font-outfit uppercase tracking-tight text-xs">
+                  Ahmednagar Jilha Maratha Vidya Prasark Samaja's
+                  <br />
+                  New Arts Commerce &amp; Science College
+                  <br />
                   <span className="text-primary tracking-normal">CS Department</span>
                 </h3>
               </div>
             </Link>
             <p className="text-sm leading-relaxed mb-8 max-w-sm">
-              Empowering the next generation of technology leaders through academic excellence and practical innovation since 1918.
+              Empowering the next generation of technology leaders at Ahmednagar Jilha Maratha Vidya Prasark Samaja's New Arts Commerce &amp; Science College since 1918.
             </p>
             <div className="flex items-center gap-3">
               {[

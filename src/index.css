@@ -5,14 +5,16 @@
 @tailwind utilities;
 
 :root {
-  --navy: #1E3A5F;
-  --navy-light: #2a4d7a;
-  --navy-dark: #152c49;
-  --primary: #2563EB;
-  --primary-hover: #1d4ed8;
+  --navy: #073B6B;
+  --navy-light: #0d4a85;
+  --navy-dark: #052c52;
+  --primary: #F7931D;
+  --primary-hover: #F39314;
+  --accent: #7B191E;
   --section-bg: #F8FAFC;
-  --glass: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.2);
+  --bg-dark: #2A1608;
+  --glass: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.3);
 }
 
 @layer base {
