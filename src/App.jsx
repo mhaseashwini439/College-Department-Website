@@ -1,32 +1,32 @@
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { DataProvider } from './context/DataContext';
-import { AuthProvider } from './context/AuthContext';
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import NoticeTicker from './components/NoticeTicker';
-import Footer from './components/Footer';
+import { AuthProvider } from './context/AuthContext';
+import { DataProvider } from './context/DataContext';
 
 // Pages
-import Home from './pages/Home';
 import AboutCollege from './pages/AboutCollege';
 import AboutDepartment from './pages/AboutDepartment';
-import Administration from './pages/Administration';
 import AcademicSchedules from './pages/AcademicSchedules';
-import Curriculum from './pages/Curriculum';
-import Results from './pages/Results';
-import Toppers from './pages/Toppers';
-import Feedback from './pages/Feedback';
-import Suggestions from './pages/Suggestions';
-import ELearning from './pages/ELearning';
-import TrainingPlacement from './pages/TrainingPlacement';
+import Administration from './pages/Administration';
 import Admission from './pages/Admission';
+import Curriculum from './pages/Curriculum';
+import ELearning from './pages/ELearning';
 import Events from './pages/Events';
+import Feedback from './pages/Feedback';
+import Home from './pages/Home';
+import Results from './pages/Results';
 import SkillDevelopment from './pages/SkillDevelopment';
+import Suggestions from './pages/Suggestions';
+import Toppers from './pages/Toppers';
+import TrainingPlacement from './pages/TrainingPlacement';
 
 // Admin
-import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminLogin from './pages/admin/AdminLogin';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
