@@ -24,10 +24,6 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
-<<<<<<< HEAD
-    "vite": "^7.3.1"
-=======
     "vite": "^5.4.21"
->>>>>>> cd3069cae4a1f908d02dc1025fa89ea298477cff
   }
 }
