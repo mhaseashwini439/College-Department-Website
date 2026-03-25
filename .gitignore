@@ -22,5 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+<<<<<<< HEAD
+.env
+=======
 .vercel
 .env*.local
+>>>>>>> cd3069cae4a1f908d02dc1025fa89ea298477cff
+=======
+>>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7

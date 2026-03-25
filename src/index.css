@@ -1,7 +1,28 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+=======
+>>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+:root {
+  --navy: #073B6B;
+  --navy-light: #0d4a85;
+  --navy-dark: #052c52;
+  --primary: #F7931D;
+  --primary-hover: #F39314;
+  --accent: #7B191E;
+  --section-bg: #F8FAFC;
+  --bg-dark: #2A1608;
+  --glass: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+=======
+>>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
 @layer base {
   * {
     margin: 0;
@@ -15,7 +36,11 @@
 
   body {
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+<<<<<<< HEAD
+    color: #334155;
+=======
     color: #1f2937;
+>>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
     background-color: #ffffff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -23,8 +48,15 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
+<<<<<<< HEAD
+    font-family: 'Outfit', sans-serif;
     line-height: 1.2;
     font-weight: 700;
+    color: var(--navy);
+=======
+    line-height: 1.2;
+    font-weight: 700;
+>>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
   }
 
   a {
