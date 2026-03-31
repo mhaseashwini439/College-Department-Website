@@ -55,7 +55,6 @@ function InputField({ label, value, onChange, type = 'text', placeholder = '' })
 }
 
 // ─── Faculty Manager ────────────────────────────────
-<<<<<<< HEAD
 function FacultyManager({ data, addFaculty, updateFaculty, deleteFaculty }) {
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState(null);
@@ -77,30 +76,6 @@ function FacultyManager({ data, addFaculty, updateFaculty, deleteFaculty }) {
     if (window.confirm('Are you sure you want to delete this faculty member?')) {
       await deleteFaculty(id);
     }
-=======
-function FacultyManager({ data, updateData }) {
-  const [showModal, setShowModal] = useState(false);
-  const [editing, setEditing] = useState(null);
-  const [form, setForm] = useState({ name: '', designation: '', qualification: '', imageUrl: '', specialization: '' });
-
-  const openAdd = () => { setEditing(null); setForm({ name: '', designation: '', qualification: '', imageUrl: '', specialization: '' }); setShowModal(true); };
-  const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
-
-  const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = data.faculty.map(f => f.id === editing.id ? { ...f, ...form } : f);
-    } else {
-      const newId = Math.max(0, ...data.faculty.map(f => f.id)) + 1;
-      updated = [...data.faculty, { ...form, id: newId }];
-    }
-    updateData('faculty', updated);
-    setShowModal(false);
-  };
-
-  const handleDelete = (id) => {
-    updateData('faculty', data.faculty.filter(f => f.id !== id));
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
   };
 
   return (
@@ -131,10 +106,7 @@ function FacultyManager({ data, updateData }) {
           <InputField label="Designation" value={form.designation} onChange={v => setForm({...form, designation: v})} placeholder="e.g. Assistant Professor" />
           <InputField label="Qualification" value={form.qualification} onChange={v => setForm({...form, qualification: v})} placeholder="e.g. M.Sc. Computer Science" />
           <InputField label="Specialization" value={form.specialization} onChange={v => setForm({...form, specialization: v})} placeholder="e.g. Machine Learning" />
-<<<<<<< HEAD
           <InputField label="Contact" value={form.contact} onChange={v => setForm({...form, contact: v})} placeholder="Phone number" />
-=======
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
           <InputField label="Image URL" value={form.imageUrl} onChange={v => setForm({...form, imageUrl: v})} placeholder="Optional image URL" />
           <button onClick={handleSave} className="w-full mt-2 flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-hover transition-colors">
             <Save size={16} /> {editing ? 'Update' : 'Add'} Faculty
@@ -146,11 +118,7 @@ function FacultyManager({ data, updateData }) {
 }
 
 // ─── Timetable Manager ────────────────────────────────
-<<<<<<< HEAD
 function TimetableManager({ data, addTimetable }) {
-=======
-function TimetableManager({ data, updateData }) {
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState(null);
   const [form, setForm] = useState({ year: '', pdfUrl: '', semester: '' });
@@ -158,7 +126,6 @@ function TimetableManager({ data, updateData }) {
   const openAdd = () => { setEditing(null); setForm({ year: '', pdfUrl: '', semester: '' }); setShowModal(true); };
   const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
 
-<<<<<<< HEAD
   const handleSave = async () => {
     if (editing) {
       alert('Update not yet implemented for MySQL');
@@ -168,19 +135,6 @@ function TimetableManager({ data, updateData }) {
     setShowModal(false);
   };
 // ... rest of component stays same, but uses addTimetable instead of updateData ...
-=======
-  const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = data.timetables.map(t => t.id === editing.id ? { ...t, ...form } : t);
-    } else {
-      const newId = Math.max(0, ...data.timetables.map(t => t.id)) + 1;
-      updated = [...data.timetables, { ...form, id: newId }];
-    }
-    updateData('timetables', updated);
-    setShowModal(false);
-  };
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
 
   const handleDelete = (id) => {
     updateData('timetables', data.timetables.filter(t => t.id !== id));
@@ -418,17 +372,12 @@ function PlacementManager({ data, updateData }) {
 }
 
 // ─── Notice Manager ────────────────────────────────
-<<<<<<< HEAD
 function NoticeManager({ data, addNotice, updateNotice, deleteNotice }) {
-=======
-function NoticeManager({ data, updateData }) {
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState(null);
   const [form, setForm] = useState({ title: '', date: '', content: '' });
 
   const openAdd = () => { setEditing(null); setForm({ title: '', date: new Date().toISOString().split('T')[0], content: '' }); setShowModal(true); };
-<<<<<<< HEAD
   const openEdit = (item) => { setEditing(item); setForm({ ...item, date: item.date.split('T')[0] }); setShowModal(true); };
 
   const handleSave = async () => {
@@ -444,24 +393,6 @@ function NoticeManager({ data, updateData }) {
     if (window.confirm('Are you sure you want to delete this notice?')) {
       await deleteNotice(id);
     }
-=======
-  const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
-
-  const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = data.notices.map(n => n.id === editing.id ? { ...n, ...form } : n);
-    } else {
-      const newId = Math.max(0, ...data.notices.map(n => n.id)) + 1;
-      updated = [...data.notices, { ...form, id: newId }];
-    }
-    updateData('notices', updated);
-    setShowModal(false);
-  };
-
-  const handleDelete = (id) => {
-    updateData('notices', data.notices.filter(n => n.id !== id));
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
   };
 
   return (
@@ -477,11 +408,7 @@ function NoticeManager({ data, updateData }) {
           <div key={n.id} className="flex items-center justify-between p-3 bg-section-bg rounded-lg">
             <div>
               <p className="font-medium text-navy text-sm">{n.title}</p>
-<<<<<<< HEAD
               <p className="text-xs text-gray-500">{n.date.split('T')[0]} — {n.content}</p>
-=======
-              <p className="text-xs text-gray-500">{n.date} — {n.content}</p>
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
             </div>
             <div className="flex gap-1">
               <button onClick={() => openEdit(n)} className="p-1.5 hover:bg-white rounded-lg transition-colors"><Pencil size={14} className="text-primary" /></button>
@@ -610,7 +537,6 @@ function EventsManager({ data, updateData, updateNestedData }) {
 // ─── Main Dashboard ────────────────────────────────
 export default function AdminDashboard() {
   const { isAuthenticated, logout } = useAuth();
-<<<<<<< HEAD
   const { 
     data, 
     loading, 
@@ -622,9 +548,6 @@ export default function AdminDashboard() {
     deleteFaculty, 
     addTimetable 
   } = useData();
-=======
-  const { data, updateData, updateNestedData } = useData();
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
   const [activeSection, setActiveSection] = useState('faculty');
   const navigate = useNavigate();
 
@@ -633,7 +556,6 @@ export default function AdminDashboard() {
     return null;
   }
 
-<<<<<<< HEAD
   if (loading) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
@@ -670,17 +592,6 @@ export default function AdminDashboard() {
           updateNotice={updateNotice} 
           deleteNotice={deleteNotice} 
         />;
-=======
-  const renderManager = () => {
-    switch (activeSection) {
-      case 'faculty': return <FacultyManager data={data} updateData={updateData} />;
-      case 'timetable': return <TimetableManager data={data} updateData={updateData} />;
-      case 'syllabus': return <SyllabusManager data={data} updateData={updateData} />;
-      case 'toppers': return <TopperManager data={data} updateData={updateData} />;
-      case 'placements': return <PlacementManager data={data} updateData={updateData} />;
-      case 'events': return <EventsManager data={data} updateData={updateData} updateNestedData={updateNestedData} />;
-      case 'notices': return <NoticeManager data={data} updateData={updateData} />;
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
       default: return null;
     }
   };

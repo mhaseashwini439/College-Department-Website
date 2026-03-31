@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { initialData } from '../data/initialData';
 import { apiService } from '../services/api';
-=======
-import { createContext, useContext, useState, useCallback } from 'react';
-import { loadData, saveData } from '../data/initialData';
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
 
 const DataContext = createContext(null);
 
 export function DataProvider({ children }) {
-<<<<<<< HEAD
   const [data, setData] = useState(initialData);
   const [loading, setLoading] = useState(true);
 
@@ -119,34 +113,6 @@ export function DataProvider({ children }) {
       addTimetable,
       refreshData: fetchData 
     }}>
-=======
-  const [data, setData] = useState(() => loadData());
-
-  const updateData = useCallback((key, value) => {
-    setData(prev => {
-      const updated = { ...prev, [key]: value };
-      saveData(updated);
-      return updated;
-    });
-  }, []);
-
-  const updateNestedData = useCallback((parentKey, childKey, value) => {
-    setData(prev => {
-      const updated = {
-        ...prev,
-        [parentKey]: {
-          ...prev[parentKey],
-          [childKey]: value,
-        }
-      };
-      saveData(updated);
-      return updated;
-    });
-  }, []);
-
-  return (
-    <DataContext.Provider value={{ data, updateData, updateNestedData }}>
->>>>>>> a3edbfb6126c6d05b9307d910b0cd39aa0b0f1f7
       {children}
     </DataContext.Provider>
   );
