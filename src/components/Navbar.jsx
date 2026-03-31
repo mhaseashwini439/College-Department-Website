@@ -2,11 +2,19 @@ import { NavLink, useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 const navItems = [
   { label: 'Home', path: '/' },
   {
     label: 'About', path: '/about',
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     children: [
       { label: 'About College', path: '/about/college' },
       { label: 'About Department', path: '/about/department' },
@@ -15,6 +23,10 @@ const navItems = [
   { label: 'Admissions', path: '/admission' },
   {
     label: 'Students', path: '/student-corner',
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     children: [
       { label: 'Academic Schedules', path: '/student-corner/schedules' },
       { label: 'Curriculum', path: '/student-corner/curriculum' },
@@ -28,6 +40,10 @@ const navItems = [
   { label: 'Placements', path: '/training-placement' },
   { label: 'Events', path: '/events' },
   { label: 'Skills', path: '/skill-development' },
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 ];
 
 export default function Navbar() {
@@ -86,12 +102,20 @@ export default function Navbar() {
                       )}
                     </>
                   )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
                 </NavLink>
               )}
 
               {/* Desktop dropdown */}
               {item.children && (
                 <div className="absolute top-full left-0 bg-white text-gray-800 rounded-b-xl shadow-2xl min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4 border border-gray-100 overflow-hidden py-2 p-1">
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
                   {item.children.map(child => (
                     <NavLink
                       key={child.path}
@@ -104,6 +128,10 @@ export default function Navbar() {
                     >
                       {child.label}
                       {location.pathname === child.path && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
                     </NavLink>
                   ))}
                 </div>
@@ -121,6 +149,10 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
           </button>
         </div>
       </div>
@@ -198,6 +230,10 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     </nav>
   );
 }

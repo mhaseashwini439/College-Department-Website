@@ -3,6 +3,10 @@ import { Shield } from 'lucide-react';
 import { useState } from 'react';
 import FacultyCard from '../components/FacultyCard';
 import StaffImage from '../components/StaffImage';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 import { useData } from '../context/DataContext';
 
 const fadeUp = {
@@ -17,6 +21,10 @@ export default function Administration() {
   const handleToggle = (id) => {
     setOpenCardId(prev => prev === id ? null : id);
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -46,6 +54,10 @@ export default function Administration() {
                 <span className="text-xs font-bold text-primary uppercase tracking-wider">{person.title}</span>
                 <h3 className="text-xl font-bold text-navy mt-1">{person.name}</h3>
                 <div className="w-8 h-0.5 bg-gray-100 mt-2" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
               </div>
             </div>
           ))}
@@ -65,6 +77,10 @@ export default function Administration() {
               isOpen={openCardId === f.id}
               onToggle={() => handleToggle(f.id)}
             />
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
           ))}
         </div>
       </motion.div>

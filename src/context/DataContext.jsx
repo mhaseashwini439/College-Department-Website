@@ -1,6 +1,10 @@
 import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { initialData } from '../data/initialData';
 import { apiService } from '../services/api';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 const DataContext = createContext(null);
 
@@ -113,6 +117,10 @@ export function DataProvider({ children }) {
       addTimetable,
       refreshData: fetchData 
     }}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
       {children}
     </DataContext.Provider>
   );

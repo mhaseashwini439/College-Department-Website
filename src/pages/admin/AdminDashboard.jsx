@@ -134,10 +134,14 @@ function TimetableManager({ data, addTimetable }) {
     }
     setShowModal(false);
   };
+<<<<<<< HEAD
 // ... rest of component stays same, but uses addTimetable instead of updateData ...
+=======
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
   const handleDelete = (id) => {
-    updateData('timetables', data.timetables.filter(t => t.id !== id));
+    // In actual implementation, this would call deleteTimetable from context
+    alert('Delete not yet implemented for MySQL');
   };
 
   return (
@@ -186,19 +190,13 @@ function SyllabusManager({ data, updateData }) {
   const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
 
   const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = data.syllabus.map(s => s.id === editing.id ? { ...s, ...form } : s);
-    } else {
-      const newId = Math.max(0, ...data.syllabus.map(s => s.id)) + 1;
-      updated = [...data.syllabus, { ...form, id: newId }];
-    }
-    updateData('syllabus', updated);
+    // In MySQL mode, we would use an API call
+    alert('MySQL saving for Syllabus not yet implemented');
     setShowModal(false);
   };
 
   const handleDelete = (id) => {
-    updateData('syllabus', data.syllabus.filter(s => s.id !== id));
+    alert('MySQL delete for Syllabus not yet implemented');
   };
 
   return (
@@ -255,19 +253,12 @@ function TopperManager({ data, updateData }) {
   const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
 
   const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = data.toppers.map(t => t.id === editing.id ? { ...t, ...form } : t);
-    } else {
-      const newId = Math.max(0, ...data.toppers.map(t => t.id)) + 1;
-      updated = [...data.toppers, { ...form, id: newId }];
-    }
-    updateData('toppers', updated);
+    alert('MySQL saving for Toppers not yet implemented');
     setShowModal(false);
   };
 
   const handleDelete = (id) => {
-    updateData('toppers', data.toppers.filter(t => t.id !== id));
+    alert('MySQL delete for Toppers not yet implemented');
   };
 
   return (
@@ -318,19 +309,12 @@ function PlacementManager({ data, updateData }) {
   const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
 
   const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = data.placements.map(p => p.id === editing.id ? { ...p, ...form } : p);
-    } else {
-      const newId = Math.max(0, ...data.placements.map(p => p.id)) + 1;
-      updated = [...data.placements, { ...form, id: newId }];
-    }
-    updateData('placements', updated);
+    alert('MySQL saving for Placements not yet implemented');
     setShowModal(false);
   };
 
   const handleDelete = (id) => {
-    updateData('placements', data.placements.filter(p => p.id !== id));
+    alert('MySQL delete for Placements not yet implemented');
   };
 
   return (
@@ -441,7 +425,7 @@ function NoticeManager({ data, addNotice, updateNotice, deleteNotice }) {
 }
 
 // ─── Events Manager ────────────────────────────────
-function EventsManager({ data, updateData, updateNestedData }) {
+function EventsManager({ data, updateNestedData }) {
   const categories = ['alumni', 'extraCurricular', 'conferences', 'cultural', 'awards', 'social'];
   const [activeCategory, setActiveCategory] = useState('conferences');
   const [showModal, setShowModal] = useState(false);
@@ -454,19 +438,12 @@ function EventsManager({ data, updateData, updateNestedData }) {
   const openEdit = (item) => { setEditing(item); setForm({ ...item }); setShowModal(true); };
 
   const handleSave = () => {
-    let updated;
-    if (editing) {
-      updated = events.map(e => e.id === editing.id ? { ...e, ...form } : e);
-    } else {
-      const newId = Math.max(0, ...events.map(e => e.id)) + 1;
-      updated = [...events, { ...form, id: newId }];
-    }
-    updateNestedData('events', activeCategory, updated);
+    alert('MySQL saving for Events not yet implemented');
     setShowModal(false);
   };
 
   const handleDelete = (id) => {
-    updateNestedData('events', activeCategory, events.filter(e => e.id !== id));
+    alert('MySQL delete for Events not yet implemented');
   };
 
   return (

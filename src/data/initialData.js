@@ -22,6 +22,10 @@ export const initialData = {
     { id: 11, name: "Prof. M.J. Jasud",     designation: "Assistant Professor", qualification: "M.Sc. (Computer Science)", imageUrl: "/administration/jasud_mj.jpeg",     imagePosition: "center 20%", zoom: 5.0, specialization: "Information Security",        contact: "7218566416", experience: "10 years" },
     { id: 12, name: "Prof. K.S. Choure",    designation: "Assistant Professor", qualification: "M.Sc. (Computer Science)", imageUrl: "/administration/choure_ks.jpeg",    imagePosition: "center 20%", zoom: 1.5, specialization: "Data Analytics",              contact: "7498487397", experience: "3 years" },
     { id: 9,  name: "Prof. M.R. Choudhary", designation: "Assistant Professor", qualification: "M.Sc. Computer Science",   imageUrl: "/administration/choudhary_mr.jpeg", imagePosition: "center 8%",  zoom: 1.0, specialization: "Cloud Computing",             contact: "9049662964", experience: "5+ years" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
   ],
 
   timetables: [
@@ -57,6 +61,10 @@ export const initialData = {
     { id: 8, title: "M.Sc. CS - I", semester: "Semester II", date: "April 2024", pdfUrl: "/Information/Results/msc1_sem2.pdf" },
     { id: 9, title: "M.Sc. CS - II", semester: "Semester III", date: "Jan 2024", pdfUrl: "/Information/Results/msc2_sem3.pdf" },
     { id: 10, title: "M.Sc. CS - II", semester: "Semester IV", date: "April 2024", pdfUrl: "/Information/Results/msc2_sem4.pdf" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
   ],
 
   toppers: [],
@@ -108,6 +116,10 @@ export const initialData = {
       { id: 1, subject: "Big Data Analytics", semester: "Semester I", referenceBookUrl: "https://spark.apache.org/docs/latest/", labBookUrl: "https://hadoop.apache.org/docs/stable/", normalBookUrl: "https://kafka.apache.org/documentation/", videoUrl: "https://www.youtube.com/watch?v=bAyrObl7TYE", thumbnailUrl: "https://img.youtube.com/vi/bAyrObl7TYE/hqdefault.jpg", referenceBookName: "Hadoop (Packt)", labBookName: "Spark/Hadoop Lab", normalBookName: "Big Data (Marz)", icon: "Server", tags: ["Scalable"], duration: "24:50" },
       { id: 2, subject: "Deep Learning", semester: "Semester I", referenceBookUrl: "https://www.deeplearningbook.org/slides/index.html", labBookUrl: "https://pytorch.org/tutorials/", normalBookUrl: "https://www.tensorflow.org/tutorials", videoUrl: "https://www.youtube.com/watch?v=6M5VXNMfJ24", thumbnailUrl: "https://img.youtube.com/vi/6M5VXNMfJ24/hqdefault.jpg", referenceBookName: "Deep Learning (Goodfellow)", labBookName: "PyTorch Practical", normalBookName: "DL with Python (Chollet)", icon: "Workflow", tags: ["Complex"], duration: "35:00" },
       { id: 3, subject: "Internet of Things", semester: "Semester II", referenceBookUrl: "https://www.arduino.cc/en/Tutorial/HomePage", labBookUrl: "https://projects.raspberrypi.org/en", normalBookUrl: "https://docs.microsoft.com/en-us/azure/iot-hub/", videoUrl: "https://www.youtube.com/watch?v=h0gWfVCSGQQ", thumbnailUrl: "https://img.youtube.com/vi/h0gWfVCSGQQ/hqdefault.jpg", referenceBookName: "IoT (PHI)", labBookName: "Arduino/RPi Practical", normalBookName: "IoT Systems (Wiley)", icon: "Wifi", tags: ["Hardware"], duration: "16:20" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     ],
   },
 
@@ -116,6 +128,10 @@ export const initialData = {
 
 // Keys used in localStorage
 const STORAGE_KEY = 'cs_dept_data_v10';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 export function loadData() {
   const stored = localStorage.getItem(STORAGE_KEY);

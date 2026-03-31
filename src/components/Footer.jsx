@@ -183,6 +183,10 @@ export default function Footer() {
           </motion.button>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     </footer>
   );
 }

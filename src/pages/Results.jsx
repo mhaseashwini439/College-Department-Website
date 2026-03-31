@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, FileText, Download } from 'lucide-react';
 import { useData } from '../context/DataContext';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -74,6 +78,10 @@ export default function Results() {
       </div>
 
       {/* backup Portal Link */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -91,6 +99,10 @@ export default function Results() {
           className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
         >
           <ExternalLink size={16} /> Official University Results Portal
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
         </a>
       </motion.div>
     </div>

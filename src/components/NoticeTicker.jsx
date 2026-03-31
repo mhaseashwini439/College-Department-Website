@@ -1,6 +1,10 @@
 import { useData } from '../context/DataContext';
 import { motion } from 'framer-motion';
 import { Bell } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 export default function NoticeTicker() {
   const { data } = useData();
@@ -24,6 +28,10 @@ export default function NoticeTicker() {
                 {n.title} 
                 <span className="mx-2 text-slate-300 font-normal">|</span>
                 <span className="text-slate-500 font-medium">{n.date}</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
               </span>
             ))}
           </div>
@@ -40,6 +48,10 @@ export default function NoticeTicker() {
         .mask-edges {
           mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
           -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
         }
       `}</style>
     </div>

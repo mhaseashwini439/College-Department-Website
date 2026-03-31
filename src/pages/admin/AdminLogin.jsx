@@ -20,6 +20,10 @@ export default function AdminLogin() {
     e.preventDefault();
     const success = await login(username, password);
     if (success) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
       navigate('/admin/dashboard');
     } else {
       setError('Invalid username or password');

@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Play, ArrowRight, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
 import ChartComponent from '../components/ChartComponent';
+=======
+import { ArrowRight, Users, GraduationCap, BookOpen, Award } from 'lucide-react';
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  visible: { opacity: 1, y: 0 }
 };
 
+<<<<<<< HEAD
 const stagger = {
   visible: { transition: { staggerChildren: 0.1 } }
 };
@@ -52,34 +57,29 @@ export default function Home() {
             animate="visible"
             variants={stagger}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch"
+=======
+export default function Home() {
+  return (
+    <div>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-navy to-navy-light text-white">
+        <div className="max-w-7xl mx-auto px-4 py-20 text-center">
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="text-3xl md:text-5xl font-bold mb-4"
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
           >
-            {/* COLUMN 1: Placement Growth Chart */}
-            <motion.div variants={fadeUp} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col">
-              <div className="text-[10px] text-primary font-black uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary animate-ping inline-block" />
-                Year-wise Placements
-              </div>
-              <div className="flex-1">
-                <ChartComponent title="Placements" data={placementData} dataKey="students" color="#F7931D" hideTitle />
-              </div>
-              <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
-                <div>
-                  <div className="text-white font-black text-xl">100+</div>
-                  <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest">Annual Placements</div>
-                </div>
-                <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Award size={16} className="text-primary" />
-                </div>
-              </div>
-            </motion.div>
+            Department of Computer Science
+          </motion.h1>
 
-            {/* COLUMN 2: Department of Computer Science + Buttons */}
-            <motion.div variants={fadeUp} className="text-center flex flex-col items-center justify-center gap-5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] font-black uppercase tracking-[0.2em]">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
-                Welcome to
-              </div>
+          <p className="text-gray-300 mb-6">
+            Shaping future tech leaders through quality education.
+          </p>
 
+<<<<<<< HEAD
               <div>
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-white font-outfit leading-tight tracking-tight">
                   Department of
@@ -158,10 +158,19 @@ export default function Home() {
             </motion.div>
 
           </motion.div>
+=======
+          <Link
+            to="/admission"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg"
+          >
+            Apply Now <ArrowRight size={16} />
+          </Link>
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
         </div>
       </section>
 
       {/* Stats Section */}
+<<<<<<< HEAD
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -186,11 +195,32 @@ export default function Home() {
               <stat.icon size={32} className="mb-6 text-primary group-hover:scale-110 transition-transform duration-300" />
               <div className="text-4xl font-extrabold text-navy font-outfit mb-1">{stat.value}</div>
               <div className="text-sm font-bold text-slate-400 uppercase tracking-widest">{stat.label}</div>
+=======
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { icon: Users, label: 'Programs', value: '3+' },
+            { icon: GraduationCap, label: 'Faculty', value: '12+' },
+            { icon: BookOpen, label: 'Labs', value: '4' },
+            { icon: Award, label: 'Intake', value: '220' }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp}
+              className="text-center p-6 border rounded-lg"
+            >
+              <item.icon className="mx-auto mb-2 text-primary" />
+              <h3 className="text-xl font-bold">{item.value}</h3>
+              <p className="text-gray-500 text-sm">{item.label}</p>
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
+<<<<<<< HEAD
       {/* About Sections */}
       <section className="bg-slate-50/50 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -344,6 +374,27 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+=======
+      {/* About Section */}
+      <section className="bg-section-bg">
+        <div className="max-w-7xl mx-auto px-4 py-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            About Department
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto">
+            Our department offers UG and PG programs with focus on practical and industry-ready skills.
+          </p>
+
+          <Link
+            to="/about/department"
+            className="inline-flex items-center gap-2 text-primary mt-4"
+          >
+            Learn More <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     </div>
   );
 }

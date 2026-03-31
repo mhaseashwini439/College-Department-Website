@@ -39,11 +39,19 @@ export default function AcademicSchedules() {
               </div>
               <a
                 href={tt.pdfUrl}
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-hover transition-colors w-full justify-center"
               >
                 <FileText size={14} /> View/Download
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
               </a>
             </div>
           ))}

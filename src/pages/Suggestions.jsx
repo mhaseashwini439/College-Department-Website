@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, MessageCircle, Mail, Phone, User } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -20,11 +24,19 @@ export default function Suggestions() {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
     setFormData({ name: '', email: '', phone: '', suggestion: '' });
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
   };
 
   return (
@@ -51,6 +63,10 @@ export default function Suggestions() {
             <button
               onClick={() => setSubmitted(false)}
               className="mt-6 px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all"
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
             >
               Submit another suggestion
             </button>
@@ -120,6 +136,10 @@ export default function Suggestions() {
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover transition-all w-full justify-center shadow-lg shadow-primary/20"
             >
               <Send size={18} /> Send Suggestion
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
             </button>
           </form>
         )}

@@ -19,6 +19,10 @@ export function AuthProvider({ children }) {
       }
     } catch (error) {
       console.error('Login error:', error);
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     }
     return false;
   }, []);

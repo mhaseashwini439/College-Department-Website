@@ -31,6 +31,10 @@
   body {
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
     color: #334155;
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
     background-color: #ffffff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -42,6 +46,10 @@
     line-height: 1.2;
     font-weight: 700;
     color: var(--navy);
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
   }
 
   a {

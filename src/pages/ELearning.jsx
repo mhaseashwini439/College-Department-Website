@@ -7,6 +7,10 @@ import {
   Cloud, Terminal, Server, Workflow, Wifi, Code, Play,
   ClipboardList, GraduationCap, ScrollText, StickyNote
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> da8300eed22f507a198d3c58bb189ee71239ad79
 import { useData } from '../context/DataContext';
 
 const fadeUp = {
